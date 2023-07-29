@@ -1,0 +1,39 @@
+public static void main(String[] args) {
+    int num1 = 123;
+    int num2 = 456789;
+    int num3 = 78;
+
+    String format1 = "%6d";
+    String format2 = "%-6d";
+
+    System.out.println(String.format(format1, num1)); // 右寄せ
+    System.out.println(String.format(format2, num1)); // 左寄せ
+
+    System.out.println(String.format(format1, num2)); // 右寄せ
+    System.out.println(String.format(format2, num2)); // 左寄せ
+
+    System.out.println(String.format(format1, num3)); // 右寄せ
+    System.out.println(String.format(format2, num3)); // 左寄せ
+}
+出力結果：
+
+   123
+123   
+456789
+456789
+    78
+78    
+
+このようになり
+指定のマスを決めてその中でどうするか決めていく
+
+% 修飾 マスの指定 型の指定をする
+
+主なもの
+%s: 文字列をフォーマットします。
+%d: 整数をフォーマットします。
+%f: 浮動小数点数をフォーマットします。
+%n: 改行を挿入します。
+%10s: 10文字幅で文字列を表示します（右寄せ）。
+%-10s: 10文字幅で文字列を表示します（左寄せ）。
+%5.2f: 浮動小数点数を5文字幅で表示し、小数点以下は2桁とします。
