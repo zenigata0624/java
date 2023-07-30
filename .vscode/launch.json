@@ -8,6 +8,27 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "practice6.Main",
+            "projectName": "java_2ac0d7b7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "practice4.Main",
+            "projectName": "java_2ac0d7b7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "time1.Main",
+            "projectName": "java_2ac0d7b7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "time.Main",
             "projectName": "java_2ac0d7b7"
         },
