@@ -1,0 +1,55 @@
+package linkedList;
+import java.util.ArrayList;
+import java.util.LinkedList;
+
+
+public class List {
+    //型はListにしてどちらも使えるように曖昧にする
+    //arrayとlinkedは答えは一緒だが内部構造が違う。
+    List<String> list1 = new ArrayList<>();
+    list1.add("Apple");
+    list1.add("Banana");
+    list1.add("Orange");
+
+    List<String> list2 = new LinkedList<>();
+    list1.add("Apple");
+    list1.add("Banana");
+    list1.add("Orange");
+
+    public static void println(list1){
+        for(String s : list1){
+            System.out.println(s);
+        }
+    }
+    
+    public static void printLn(list2){
+        for(String s : list2){
+            System.out.println(s);
+        }
+    }
+
+
+}
+
+Listのみの曖昧な定義からの呼び出し
+
+import java.util.List;
+
+public class Main {
+    public static void main(String[] args) {
+        // LinkedListを使ってListを作成
+        List<String> list2 = new LinkedList<>();
+        list2.add("Cat");
+        list2.add("Dog");
+        list2.add("Elephant");
+
+        // メソッド呼び出し
+        printList(list2);
+    }
+
+    public static void printList(List<String> list) {
+        for (String s : list) {
+            System.out.println(s);
+        }
+    }
+}
