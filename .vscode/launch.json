@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "practice7.Main",
+            "projectName": "java_2ac0d7b7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "mapList.Main",
             "projectName": "java_2ac0d7b7"
         },

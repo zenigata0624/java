@@ -1,0 +1,21 @@
+varは型にあわせてくれる型
+
+var a =  22; int型
+
+var h = new Hero(); 新しいインスタンスの作成
+ 
+var list = new ArrayList<String>();　新しい配列の作成
+
+変数の型が明確ではないと動かないので注意
+これは動かない
+var x;
+var y = null;
+var score = {10,20,30};
+
+あくまで型のみの補助なので引数や戻り値、フィールド変数には使えません
+
+例 varを使わなかった場合
+Hashmap<String,Integer> h1 = new Hashmap<String,Integer>();
+
+varを使った場合
+var h1 = new Hashmap<String,Integer>();
