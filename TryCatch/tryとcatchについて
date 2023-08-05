@@ -1,0 +1,74 @@
+基本構文
+try{
+    本来の処理
+}catch(例外クラス 変数名){
+ 例外が発生した場合の処理
+}
+※基本構文の例はExceptionの方へ
+
+
+
+例外が発生してもどのような状態でも必ず処理を実行する
+
+try{
+    本来の処理
+}catch(例外クラス 変数名){
+ 例外が発生した場合の処理
+}finally{
+    例外があってもなくても必ず実行される例
+}
+
+
+
+close()が自動的に行われるファイルの作成文
+Try-with-resourseの文法
+
+try(closenにより後片付けが必要な変数宣言){
+    本来の処理
+}catch(例外クラス 変化名){
+    例外が発生した処理
+}
+※基本構文はmainへ
+
+
+
+上から順に検索をし、最初にcatchしたブロック処理を行う
+
+try{
+    FileWriter fw = new FileWriter("data.txt");
+    fw.write("hello");
+    fw.close();
+}catch(IOException e ){
+    System.out.println("書き込みのしっぱい");
+}catch(nullpointerException e) {
+    System.out.println("nullだよ");
+}catch(Exception e){
+    System.out.ptrintln("それ以外の処理はここになる")
+}
+ }
+
+ ※どちらとも同じ処理をする場合は
+catch(IOException|nullpointerException e)という書き方も可能
+
+
+AutoCloseableについて
+変数宣言時等はmain関数の場所で自動的に閉じるようにする
+
+public class MyResource implements AutoCloseable {
+    // コンストラクタなどの処理
+
+    @Override
+    public void close() throws Exception {
+        // リソースの解放処理
+    }
+}
+
+mainのほうで閉じる
+public static void main(String[] args) {
+    try (MyResource resource = new MyResource()) {
+        // resourceを使用した処理
+        // ここで例外が発生しても自動的にclose()が呼び出される
+    } catch (Exception e) {
+        // 例外処理
+    }
+}
