@@ -1,0 +1,87 @@
+
+
+AutoCloseableについて
+変数宣言時等はmain関数の場所で自動的に閉じるようにする
+
+public class MyResource implements AutoCloseable {
+    // コンストラクタなどの処理
+
+    @Override
+    public void close() throws Exception {
+        // リソースの解放処理
+    }
+}
+
+mainのほうで閉じる
+public static void main(String[] args) {
+    try (MyResource resource = new MyResource()) {
+        // resourceを使用した処理
+        // ここで例外が発生しても自動的にclose()が呼び出される
+    } catch (Exception e) {
+        // 例外処理
+    }
+}
+
+
+
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+
+
+スロー宣言による例外伝播（でんぱ）の許可の基本文法
+
+アクセス修飾子 戻り値 メソッド名(引数リスト)
+    throws 例外クラス１,例外クラス２{
+        メソッド処理
+    }
+
+
+    スロー宣言の所ではcatch文を書くこととファイルを閉じることをしなくてもよい
+    mainメソッドでtry-catch-resourseを使うことで省略でき、catchの例外処理も
+    そちらの記述で行うことが好ましい
+    ※ただし例外処理の種類は具体的な種類を提示すること
+    その種類によってスロー宣言で提示した処理内容が決まる
+
+
+
+    下の場合は
+    スロー宣言でthrows IOExceptionをやった時には、
+    mainメソッドで、 catch (IOException e) の処理が行われる
+
+
+    public void someMethod() throws IOException {
+        // ファイルを読み込む処理（例としてファイルパスを指定）
+        String filePath = "sample.txt";
+        try (BufferedReader reader = new BufferedReader(new FileReader(filePath))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                System.out.println(line);
+            }
+        }
+    }
+
+
+    public static void main(String[] args) {
+        MyClass myClass = new MyClass();
+        try {
+            myClass.someMethod();
+        } catch (IOException e) {
+            System.err.println("例外が発生しました: " + e.getMessage());
+        }
+    }
+}
+
+メソッドを作るときは
+メソッドに対してのtry-catchを呼び出した方で処理するスロー宣言を使うか
+そのメソッドだけでのtry-catchを定義するかの二択がせまられる
+
+
+例外的状況の報告
+
+throw 例外インスタンス
+※一般的には throw new 例外クラス名("エラーメッセージ");
+
+mainメソッドに参照

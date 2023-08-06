@@ -51,24 +51,3 @@ try{
 catch(IOException|nullpointerException e)という書き方も可能
 
 
-AutoCloseableについて
-変数宣言時等はmain関数の場所で自動的に閉じるようにする
-
-public class MyResource implements AutoCloseable {
-    // コンストラクタなどの処理
-
-    @Override
-    public void close() throws Exception {
-        // リソースの解放処理
-    }
-}
-
-mainのほうで閉じる
-public static void main(String[] args) {
-    try (MyResource resource = new MyResource()) {
-        // resourceを使用した処理
-        // ここで例外が発生しても自動的にclose()が呼び出される
-    } catch (Exception e) {
-        // 例外処理
-    }
-}
