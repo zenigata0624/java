@@ -7,6 +7,7 @@ public class Main {
         h.setName("湊");
         h.hp = 100;
 
+
         Matango m1 = new Matango();
         m1.hp = 50;
         m1.suffix = 'A';
