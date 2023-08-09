@@ -7,7 +7,7 @@ public class Main {
         try{
         String s = "あいうえお";   
         System.out.println(s.length());
-        }catch(NullPointerException e){
+        }catch(Exception e){
             System.out.println("NullPointerException 例外を検知しました");
             System.out.println("ーースタックトレースーーここから");
             e.printStackTrace();
