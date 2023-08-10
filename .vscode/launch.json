@@ -8,6 +8,20 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "practice00.Main",
+            "projectName": "java_2ac0d7b7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "summary01.Main",
+            "projectName": "java_2ac0d7b7"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "GUI.Main",
             "projectName": "java_2ac0d7b7"
         },
