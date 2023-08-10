@@ -1,0 +1,22 @@
+
+エラーの種類
+例外の発生                   数値の形式がnullである
+Exception in .... java.lang.NumberFormatEXception: null 
+
+エラーが発生した場所
+at .... java.lang.Integer.paraseInt(Integer.java:640)
+at .... java.lang.Integer.paraseInt(Integer.java:770)
+
+最も怪しいと思われるフォルダ
+at Sub.process(Sub.java:3)
+at Main.caller(Main.java:28)
+at Main.main(Main.java:6)                                       
+
+atからはじまる二行は下から順にどんなメソッドのエラーが発生の経緯が書かれている
+()内には、ソースファイル名とエラーが発生した行番号が表示される
+ソースコードがない一部のAPIは(Unknown Source)と呼ばれる
+
+まとめ
+1 エラーの発生箇所（一番上）から呼び出し元（下）へと逆に表示されています。
+2 at から始まる各行は、エラーが発生したメソッドとその呼び出し元の情報を提供しています。
+3 エラーの経路を逆にたどることで、エラーが発生した経緯を把握できます。
