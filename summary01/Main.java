@@ -60,14 +60,18 @@ public class Main {
         int g = new java.util.Random().nextInt(90);
         
         //入力を受けとる方法 整数と文字列  p93参照
+        /* 
         System.out.println("あなたの名前は?");
          String h = new java.util.Scanner(System.in).nextLine();
          System.out.println("年齢は?");
          int i = new java.util.Scanner(System.in).nextInt();
+         */
 
         //ここで出力する
+        /* 
         System.out.println("あなたの名前は=>"+ h);
         System.out.println("年齢は=>"+i);
+        */
         System.out.println(a);
         System.out.println(b);
         System.out.println("ここで出力する");
