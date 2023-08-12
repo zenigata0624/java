@@ -1,6 +1,6 @@
 package Story;
 
-import practice0.Matango;
+import practice02.Matango;
 
 public class Main {
   public static void main(String[]args){

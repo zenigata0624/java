@@ -1,4 +1,4 @@
-package practice0;
+package practice02;
 
 public class Wepon extends Item {
     public Wepon() {
