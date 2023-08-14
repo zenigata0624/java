@@ -26,6 +26,7 @@ public class Main {
     }
 
     public static void mail(){
+        
     String title = "こんにちは";
     String addres = "aaa@bbb";
     String text = "元気？";
