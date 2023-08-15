@@ -1,4 +1,4 @@
-package Story;
+package summary06;
 
 public class Sword {
     String name;

@@ -102,7 +102,8 @@ public class Main {
 
 class Hello{
     //staticは独立したメソッドとして成り立つので
-    //インスタンス化もする必要はない
+    //インスタンス化もする必要はない、ただし
+    //引数の中身の指定がない場合は変数等は使えないので注意
 public static void hello(String name){
     System.out.println(name+"さんおはよう");
 }
