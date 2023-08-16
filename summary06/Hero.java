@@ -22,9 +22,12 @@ package summary06;
 */
 public class Hero {
     //フィールド(属性)
-    String name;
-    int HP;
-
+    //他のファイルで呼び出すので
+    //publicでアクセス修飾子をかえています
+    public String name;
+    public int HP = 200;
+    final int Level = 100;
+    
     //他のクラスからの定義を持ってくる
     Sword sword;
 
@@ -50,11 +53,23 @@ public class Hero {
     }
 
     //そのままの数値でかえしているので実際は回復していない
-    public void sit(int sec){
+    public final void sit(int sec){
         this.HP += sec;
         System.out.println(this.name+"は"+sec+"秒座った");
         System.out.println(this.name+"は"+sec+"ポイント回復した");
         System.out.println(this.name+"のHPは"+this.HP+"だ");
     }
 
+    public void run(){
+      System.out.println("逃げ出した");
+    }
+
+    public Hero(String name){
+      this.name =name;
+    }
+
+    public Hero(String name,int HP){
+      this.name =name;
+      this.HP =HP;
+    }
 }

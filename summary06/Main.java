@@ -57,10 +57,10 @@ String型はAPIリファレンスに登録されている型
 public class Main{
     public static void main(String[]args){
         //インスタンスをつくる
-        Hero h = new Hero();
+        Hero h = new Hero("ダミー");
         //同じ型で新しいインスタンスを作れば、
         //新しい情報を持ったインスタンスが出来上がる
-        Hero h2 = new Hero();
+        Hero h2 = new Hero("ダミー");
         
         Sword w = new Sword();
         Kinoko a = new Kinoko();

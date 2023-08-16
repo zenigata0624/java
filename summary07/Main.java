@@ -39,7 +39,7 @@ public class Main {
     public static void main(String[] args) {
 
     //コンストラクタによって定義をmainメソッドで行うことができる
-        Dog i = new Dog("太郎");
+        Dog i = new Dog("太郎",200);
     //定義がいらない場合はコンストラクタの条件を変えておくと
     //その条件にあったものに合わせてくれる
        Dog i1 =new Dog();

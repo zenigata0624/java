@@ -6,6 +6,11 @@ public class Dog{
 
     //newされた直後にこの情報が入る
     //mainメソッドの方で定義をきめさせる方法
+    public Dog(String name,int HP){
+        this.HP = HP;
+        this.name = name;
+    }
+
     public Dog(String name){
         this.HP = 100;
         this.name = name;
@@ -17,7 +22,7 @@ public class Dog{
     public Dog(){
         //this.HP = 100;
         //this.name = "ダミー";
-        this("ダミー");
+        this("ダミー",200);
     }
 
 }
