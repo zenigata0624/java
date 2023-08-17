@@ -85,6 +85,7 @@ public class Main {
         SuperHero i2 = new SuperHero("あい");
         Kinoko h = new Kinoko();
         Wepon a = new Wepon();
+        Dancer b = new Dancer();
 
         i.run();
         //継承されたものは元のメソッドをも呼び出すことができる
@@ -93,5 +94,7 @@ public class Main {
         i2.fly();
         i2.attack(h);
         System.out.println(a.name);
+        b.Dance();
+        b.run();
     }
 }

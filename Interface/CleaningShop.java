@@ -11,27 +11,27 @@ public class CleaningShop implements Cleaning {
         System.out.println("CleaningShopが稼働中です。");
     }
 
-    public Shirt washShirt(Shirt s) {
+
+    public int washShirt(int s) {
         // 洗濯処理の実装
         System.out.println("Shirtを洗濯します");
-        System.out.println("洗濯時は"+minutes+"分です");
+        System.out.println("洗濯時は"+s+"分です");
         // 洗濯にかかる時間などの処理を実装
-        return new Shirt(minutes);
+        return s;
     }
 
-    public Towl washTowl(Towl t) {
+    public int washTowl(int t) {
         // 洗濯処理の実装
         System.out.println("Towlを洗濯します");
-        // 洗濯にかかる時間などの処理を実装
-        int minutes = 10;
-        return new Towl(minutes);
+        System.out.println("洗濯時は"+t+"分です");
+        return t;
     }
 
-    public Coat washCoat(Coat c) {
+    public int washCoat(int c) {
         // 洗濯処理の実装
         System.out.println("Coatを洗濯します");
         // 洗濯にかかる時間などの処理を実装
-        int minutes = 20;
-        return new Coat(minutes);
+         System.out.println("洗濯時は"+c+"分です");
+        return c;
     }
 }
