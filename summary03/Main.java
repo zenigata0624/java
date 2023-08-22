@@ -119,7 +119,8 @@ public class Main {
                 System.out.print("S ");
                 break;
             }
-         }
+         
+        }
 
 
     }
